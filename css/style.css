@@ -2,15 +2,139 @@
     --main-color: rgb(1, 36, 186);
     --accent-color: rgb(9, 216, 98);
     --text-color: rgb(53, 53, 53);
+    --border-radius: 8px;
+    --font-regular: 400;
+    --font-semi-bold: 600;
+    --font-bold: 700;
 }
 
 * {
     box-sizing: border-box;
 }
 body {
-    /*font-family: 'Open Sans', sans-serif;*/
-    /*font-family: 'Raleway', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 a {
     text-decoration: none;
+}
+.container {
+    width:  1100px;
+}
+header {
+    display: flex;
+    justify-content: center;
+}
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.nav__logo {
+    font-size: 2.5rem;
+    font-weight: var(--font-bold);
+}
+.nav__menu {
+    display: flex;
+}
+.nav__menu__item {
+    margin-right: 40px;
+}
+.nav__menu__item a {
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
+}
+main {
+    height: calc(100vh - 80px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__container {
+    display: flex;
+    justify-content: space-between;
+}
+.intro__description {
+    width: 60%;
+    font-size: 1.5rem;
+    font-weight: var(--font-bold);
+    color: var(--accent-color);
+}
+.intro__title {
+    font-size: 4rem;
+    font-weight: var(--font-bold);
+    color: var(--main-color);
+    margin-bottom: 60px;
+}
+.intro__icons {
+    display: flex;
+}
+.icons__item {
+    font-size: 1rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
+    margin-right: 20px;
+}
+.intro__icons p::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+.intro__icons p:nth-of-type(1)::before {
+    content: "\f0c2";
+}
+.intro__icons p:nth-of-type(2)::before {
+    content: "\f3d1";
+}
+.intro__icons p:nth-of-type(3)::before {
+    content: "\f2f2";
+}
+.intro__form {
+    width: 40%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.form__title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+}
+.intro__form label {
+    font-size: 0.8rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: left;
+}
+.intro__form input {
+    border: none;
+    border-bottom: 1px solid #D2D2D2;
+    margin-bottom: 12px;
+    width: 100%
+}
+.intro__form input::placeholder {
+    color: #D2D2D2;
+    /*margin-bottom: 8px;*/
+}
+.form__submit input {
+    margin-top: 40px;
+    border: none;
+    background-color: var(--accent-color);
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: var(--font-semi-bold);
+    font-size: 1.1rem;
+    padding: 20px 30px;
 }
